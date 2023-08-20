@@ -6,6 +6,8 @@ export class AwsCdkTsProjectStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+
+
     new lambda.Function(this, 'lambdaFunction', {
       functionName: 'first-cdk-lambda',
       code: lambda.Code.fromAsset('src'),
