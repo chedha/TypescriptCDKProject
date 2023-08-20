@@ -1,0 +1,14 @@
+import { handler } from "../src";
+
+describe('AWS CDK App Tests', () => {
+
+    it('returns name and tekst', async () => {
+        const output = await handler({ name: 'Chris' });
+        expect(output).toStrictEqual('Good Job Chris!')
+    })
+
+    it('returns no name and tekst', async () => {
+        const output = await handler({ name: '' });
+        expect(output).toStrictEqual('Good Job')
+    })
+});
