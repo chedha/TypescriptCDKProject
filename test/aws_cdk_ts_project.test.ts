@@ -1,10 +1,10 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import * as MyFirstCdk from '../lib/aws_cdk_ts_project-stack';
+import * as  AwsCdkTsProjectStack from '../lib/aws_cdk_ts_project-stack';
 
 test('My First Stack Created', () => {
     const app = new cdk.App();
-    const stack = new AWSCDKTSPROJECT.AwsCdkTsProjectStack(app, 'MyTestStack');
+    const stack = new AwsCdkTsProjectStack.AwsCdkTsProjectStack(app, 'MyTestStack');
     const template = Template.fromStack(stack);
 
     template.hasResourceProperties('AWS::Lambda::Function', {
